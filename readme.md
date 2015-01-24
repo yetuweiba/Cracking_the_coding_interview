@@ -1,0 +1,1 @@
+这里的代码是书籍《Cracking the coding interview--问题与解答》中习题的解答，不少参考了 [Hawstein](https://github.com/Hawstein) 同学的[res](https://github.com/Hawstein/cracking-the-coding-interview)之后，自己重新写了一下，里面使用了gtest做单元测试，每道题都附带了几个用例。如果有什么错误的地方的话，谢谢指正。
