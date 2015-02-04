@@ -124,5 +124,6 @@ int main(){
 	remove_duplicates(head);
 	printf("---------------------");
 	print_list(head);
+	destory_list(head);
 	return 0;
 }
