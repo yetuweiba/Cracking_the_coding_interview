@@ -1,7 +1,7 @@
 // Given a circular linked list, implement an algorithm which returns node at the beginning of the loop.
 // DEFINITION
 
-// Circular linked list: A (corrupt) linked list in which a node¡¯s next pointer points to an earlier node, so as to make a loop in the linked list.
+// Circular linked list: A (corrupt) linked list in which a nodeâ€™s next pointer points to an earlier node, so as to make a loop in the linked list.
 
 // EXAMPLE
 
@@ -9,12 +9,12 @@
 
 // Output: C
 
-// ¼´Ñ°ÕÒÁ´±íÖĞÊÇ·ñÓĞ»·,Èç¹ûÓĞµÄ»°£¬·µ»Ø»·µÄ½Úµã¡£
+// å³å¯»æ‰¾é“¾è¡¨ä¸­æ˜¯å¦æœ‰ç¯,å¦‚æœæœ‰çš„è¯ï¼Œè¿”å›ç¯çš„èŠ‚ç‚¹ã€‚
 
-// Á½ÖÖË¼Â·£º
-// 1. Ê¹ÓÃÒ»¸ömapÀ´´æ´¢ËùÓĞ½ÚµãµÄµØÖ·£¬Ö®ºó¶Ô±ÈÃ¿¸ö½ÚµãµÄµØÖ·£¬¿´ÊÇ·ñÓĞÏàÍ¬µØÖ·£¬Èç¹ûÓĞ£¬ÔòËµÃ÷
-// Á´±íÖĞÓĞ»·£¬Ê±¼ä¸´ÔÓ¶ÈÎªO(nlogn).
-// 2. Ê¹ÓÃÁ½¸öÖ¸Õë£¬Ò»¸ö¿ìÖ¸Õë£¬Ò»¸öÂıÖ¸Õë£¬µ±¿ìÖ¸Õë¸ÏÉÏÂıÖ¸ÕëµÄÊ±ºò£¬ËµÃ÷Á´±íÖĞ´æÔÚ»·
+// ä¸¤ç§æ€è·¯ï¼š
+// 1. ä½¿ç”¨ä¸€ä¸ªmapæ¥å­˜å‚¨æ‰€æœ‰èŠ‚ç‚¹çš„åœ°å€ï¼Œä¹‹åå¯¹æ¯”æ¯ä¸ªèŠ‚ç‚¹çš„åœ°å€ï¼Œçœ‹æ˜¯å¦æœ‰ç›¸åŒåœ°å€ï¼Œå¦‚æœæœ‰ï¼Œåˆ™è¯´æ˜
+// é“¾è¡¨ä¸­æœ‰ç¯ï¼Œæ—¶é—´å¤æ‚åº¦ä¸ºO(nlogn).
+// 2. ä½¿ç”¨ä¸¤ä¸ªæŒ‡é’ˆï¼Œä¸€ä¸ªå¿«æŒ‡é’ˆï¼Œä¸€ä¸ªæ…¢æŒ‡é’ˆï¼Œå½“å¿«æŒ‡é’ˆèµ¶ä¸Šæ…¢æŒ‡é’ˆçš„æ—¶å€™ï¼Œè¯´æ˜é“¾è¡¨ä¸­å­˜åœ¨ç¯
 #include <stdio.h>
 
 struct Node
@@ -71,7 +71,7 @@ Node* get_loop_element(Node* head)
 	Node *temp1 = head;
 	Node *temp2 = head;
 	
-	// ´ËÑ­»·ÊÇÖ¤Ã÷Á´±í´æÔÚ»·
+	// æ­¤å¾ªç¯æ˜¯è¯æ˜é“¾è¡¨å­˜åœ¨ç¯
 	while(temp2 && temp2->next)
 	{
 		temp1 = temp1->next;
@@ -82,7 +82,7 @@ Node* get_loop_element(Node* head)
 		}
 	}
 
-	// µ½¶ÓÎ²£¬ËµÃ÷Ã»ÓĞ»·
+	// åˆ°é˜Ÿå°¾ï¼Œè¯´æ˜æ²¡æœ‰ç¯
 	if (!temp2 || !temp2->next)
 	{
 		return pResult;
@@ -100,8 +100,8 @@ Node* get_loop_element(Node* head)
 
 int main()
 {
-	// Ä¿Ç°ÉêÇëµÄÄÚ´æÔİÎŞ·¨ÊÍ·Å£¬ÒòÎªÁ´±íÖĞ´æÔÚ»·
-	// Ö»ÓĞµÈµ½³ÌĞòÍË³öÈ¥ºóÓÉÏµÍ³Ïú»Ù
+	// ç›®å‰ç”³è¯·çš„å†…å­˜æš‚æ— æ³•é‡Šæ”¾ï¼Œå› ä¸ºé“¾è¡¨ä¸­å­˜åœ¨ç¯
+	// åªæœ‰ç­‰åˆ°ç¨‹åºé€€å‡ºå»åç”±ç³»ç»Ÿé”€æ¯
 	int a[] = {
 		3, 6, 3, 5 
 	};
