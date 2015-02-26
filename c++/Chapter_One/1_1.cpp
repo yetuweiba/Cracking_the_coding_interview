@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <gtest/gtest.h>
 
-// 方案1：如果字符组成都是ascii码，可以申请一个256的数组，每个元素置为0，判断有则加1，如果大于1，则说明有重复
+// 方案1：如果字符组成都是ascii码，可以申请一个256的数组，每个元素置为false，判断有则置为true，如果存在true，则说明有重复
 bool is_unique_char_in_string(const char* data, int len)
 {
 	bool bret = true;
