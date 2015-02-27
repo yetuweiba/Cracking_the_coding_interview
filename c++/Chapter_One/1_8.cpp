@@ -41,11 +41,11 @@ bool isRotation(const char* str1, const int len1,
 	}
 
 	char *temp = (char *)operator new(2 * len1 + 1);
-	memset(temp, 0, 2 * len1 + 1);
 	if (!temp)
 	{
 		return ret;
 	}
+	memset(temp, 0, 2 * len1 + 1);
 
 	for (int i = 0; i < len1; ++i)
 	{
