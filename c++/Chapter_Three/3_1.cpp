@@ -1,7 +1,7 @@
 // Describe how you could use a single array to implement three stacks.
-// Ë¼Â·£º¿ÉÒÔ½«Êı¾İ¾ù·ÖÎª3¶Î£¬Ã¿¶Î×÷ÎªÒ»¸öÕ»£¬µ«ÊÇÕâÑùÓĞĞ©ÀË·Ñ£¬ËùÒÔ³¢ÊÔ
-// ¼ÓÈëÒ»ÖÖÊı¾İ½á¹¹£¬¼´Ã¿¸ö½Úµã¶¼Ö¸ÏòÉÏ¸ö½Úµã£¬ÕâÑù¾Í¿ÉÒÔÓÉµ×µ½ÉÏÌî³äÕ»£¬
-// ´Ó¶ø³ä·ÖÀûÓÃÊı×éµÄ¿Õ¼ä
+// æ€è·¯ï¼šå¯ä»¥å°†æ•°æ®å‡åˆ†ä¸º3æ®µï¼Œæ¯æ®µä½œä¸ºä¸€ä¸ªæ ˆï¼Œä½†æ˜¯è¿™æ ·æœ‰äº›æµªè´¹ï¼Œæ‰€ä»¥å°è¯•
+// åŠ å…¥ä¸€ç§æ•°æ®ç»“æ„ï¼Œå³æ¯ä¸ªèŠ‚ç‚¹éƒ½æŒ‡å‘ä¸Šä¸ªèŠ‚ç‚¹ï¼Œè¿™æ ·å°±å¯ä»¥ç”±åº•åˆ°ä¸Šå¡«å……æ ˆï¼Œ
+// ä»è€Œå……åˆ†åˆ©ç”¨æ•°ç»„çš„ç©ºé—´
 #include <iostream>
 
 const int STACK_LEN = 200;
@@ -46,23 +46,23 @@ public:
 
     int Push(const int stack_no, const int a)
     {
-		int ret = 0;
-		if (stack_no < 0 || stack_no > 2)
-		{
-			ret = -1;
-			return ret;
-		}
+        int ret = 0;
+        if (stack_no < 0 || stack_no > 2)
+        {
+            ret = -1;
+            return ret;
+        }
 
         if (curr_ >= STACK_LEN)
         {
-            std::cout << "Õ»ÂúÁË" << std::endl;
+            std::cout << "æ ˆæ»¡äº†" << std::endl;
             return -1;
         }
 
         data_[curr_].data = a;
         data_[curr_].pre = stack_top_[stack_no];
         int temp = stack_top_[stack_no];
-        // Èç¹ûµ±Ç°Î»ÖÃÔÚÊı¾İºó£¬½øĞĞÊı¾İµÄÉ¨Ãè£¬À´È·¶¨ÏÂ¸öÎ»ÖÃ
+        // å¦‚æœå½“å‰ä½ç½®åœ¨æ•°æ®åï¼Œè¿›è¡Œæ•°æ®çš„æ‰«æï¼Œæ¥ç¡®å®šä¸‹ä¸ªä½ç½®
         if (temp > curr_)
         {
 			stack_top_[stack_no] = curr_;
@@ -77,44 +77,44 @@ public:
             curr_++;
         }
 
-		return ret;
+            return ret;
     }
 	
-	int top(const int stack_no, int &top_data)
-	{
-		int ret = 0;
-		if (stack_no < 0 || stack_no > 2)
-		{
-			ret = -1;
-			return ret;
-		}
-		int stack_curr = stack_top_[stack_no];
-		if (stack_curr == -1)
-		{
-			ret = -1;
-			return ret;
-		}
+    int top(const int stack_no, int &top_data)
+    {
+        int ret = 0;
+        if (stack_no < 0 || stack_no > 2)
+        {
+            ret = -1;
+            return ret;
+        }
+        int stack_curr = stack_top_[stack_no];
+        if (stack_curr == -1)
+        {
+            ret = -1;
+            return ret;
+        }
 
-		top_data = data_[stack_curr].data;
-		return ret;
-	}
+        top_data = data_[stack_curr].data;
+        return ret;
+    }
 
-	void print(const int stack_no)
-	{
-		if (stack_no < 0 || stack_no > 2)
-		{
-			return ;
-		}
-		int temp = stack_top_[stack_no];
-		while(data_[temp].pre != -1)
-		{
-			std::cout << data_[temp].data << std::endl;
-			temp = data_[temp].pre;
-		}
-	}
+    void print(const int stack_no)
+    {
+         if (stack_no < 0 || stack_no > 2)
+         {
+             return ;
+         }
+         int temp = stack_top_[stack_no];
+         while(data_[temp].pre != -1)
+         {
+             std::cout << data_[temp].data << std::endl;
+             temp = data_[temp].pre;
+         }
+     }
 private:
-    int stack_top_[3];                   // ´æ´¢Èı¸öÕ»µÄÕ»¶¥
-    int curr_;                           // ´æ´¢ÏÂ¸öÊı¾İµÄÎ»ÖÃ
+    int stack_top_[3];                   // å­˜å‚¨ä¸‰ä¸ªæ ˆçš„æ ˆé¡¶
+    int curr_;                           // å­˜å‚¨ä¸‹ä¸ªæ•°æ®çš„ä½ç½®
     Node* data_;
 };
 
@@ -125,28 +125,28 @@ int main()
     {
         st.Push(0, i);
     }
-	st.print(0);
-	std::cout << "----------------------" << std::endl;
-	for (int i = 10; i < 14; ++i)
-	{
-		st.Push(1, i);
-	}
-	st.print(1);
-	std::cout << "----------------------" << std::endl;
-	for (int i = 20; i < 24; ++i)
-	{
-		st.Push(2, i);
-	} 
-	st.print(2);
-	std::cout << "----------------------" << std::endl;
-	st.Pop(1);
-	st.print(1);
-	std::cout << "----------------------" << std::endl;
-	st.Push(2, 14);
-	st.print(2);
-	std::cout << "----------------------" << std::endl;
-	st.Pop(2);
-	st.Push(2, 15);
-	st.print(2);
+    st.print(0);
+    std::cout << "----------------------" << std::endl;
+    for (int i = 10; i < 14; ++i)
+    {
+        st.Push(1, i);
+    }
+    st.print(1);
+    std::cout << "----------------------" << std::endl;
+    for (int i = 20; i < 24; ++i)
+    {
+        st.Push(2, i);
+    } 
+    st.print(2);
+    std::cout << "----------------------" << std::endl;
+    st.Pop(1);
+    st.print(1);
+    std::cout << "----------------------" << std::endl;
+    st.Push(2, 14);
+    st.print(2);
+    std::cout << "----------------------" << std::endl;
+    st.Pop(2);
+    st.Push(2, 15);
+    st.print(2);
     return 0;
 }
