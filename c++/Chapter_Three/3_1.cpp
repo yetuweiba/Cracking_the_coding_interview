@@ -28,10 +28,10 @@ public:
         curr_ = 0;
     }
 
-	~Stack()
-	{
-		delete[] data_;
-	}
+    ~Stack()
+    {
+        delete[] data_;
+    }
     void Pop(int stack_no)
     {
         if (stack_top_[stack_no] == -1)
