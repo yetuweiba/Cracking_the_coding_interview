@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <gtest/gtest.h>
 
+#include "../cracking_the_coding_interview/test.h"
 // Q:Write code to reverse a C-Style String. 
 // (C-String means that “abcd” is represented as five characters, including the null character.)
 // 此题要求是也要翻转末尾的'\0'

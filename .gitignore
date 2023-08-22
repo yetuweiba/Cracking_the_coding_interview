@@ -1,0 +1,15 @@
+
+cracking_the_coding_interview/.vs/cracking_the_coding_interview/v16/.suo
+*.db
+*.ipch
+*.obj
+*.tlog
+*.recipe
+*.iobj
+*.ipdb
+*.log
+*.pdb
+*.exe
+*.sdf
+*.suo
+.vscode/*

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <gtest/gtest.h>
 
+#include "../cracking_the_coding_interview/test.h"
+
 // Write a method to decide if two strings are anagrams(变位词) or not.
 // 变位词(anagrams)指的是组成两个单词的字符相同，但位置不同的单词。
 // 比如说， abbcd和abcdb就是一对变位词
