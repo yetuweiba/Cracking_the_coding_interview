@@ -39,7 +39,7 @@ int rotate_matrix(int data[][4], int len)
 	return ret;
 }
 
-int main()
+int test_1_6()
 {
 	int a[4][4] =
 	{

@@ -8,71 +8,8 @@
 
 #include <stdio.h>
 
-struct Node
-{
-	int data;
-	Node *next;
-	Node()
-		:data(0)
-		,next(NULL)
-	{
-		// empty
-	}
-};
+#include "util_2.h"
 
-Node* init_list(int data[], const int len)
-{
-	Node* head = NULL;
-
-	if (!data || len <= 0)
-	{
-		return head;
-	}
-
-
-	Node* temp = new Node();
-	temp->data = data[0];
-	head = temp;
-	for (int i = 1; i < len; ++i)
-	{
-		Node *temp1 = new Node();
-		temp->next = temp1;
-		temp1->data = data[i];
-		temp = temp->next;
-	}
-
-	return head;
-}
-
-void destory_list(Node *head)
-{
-	if (!head)
-	{
-		return; 
-	}
-
-	Node* temp = head;
-	Node* temp1 = NULL; 
-	// 删除到最后一个节点，但是最后一个节点没有释放
-	while(temp->next)
-	{
-		temp1 = temp->next;
-		delete temp;
-		temp = temp1;
-	}
-	// 释放最后一个节点
-	delete temp;
-	return;
-}
-
-void print_list(Node *head)
-{
-	while(head)
-	{
-		printf("the data is <%d>\n", head->data);
-		head = head->next;
-	}
-}
 // data 为传入参数，即倒数第n个元素的值。倒数第n个由0开始算。
 int get_reciprocal_nth_element(Node* head, const int n, int &data)
 {
@@ -106,7 +43,7 @@ int get_reciprocal_nth_element(Node* head, const int n, int &data)
 	return ret;
 }
 
-int main()
+int test_2_2()
 {
 	int n = 10;
 	int a[] = {

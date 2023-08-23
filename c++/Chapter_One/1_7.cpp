@@ -47,7 +47,7 @@ int fun(int **data, const int row, const int column)
 	return ret;
 }
 
-int main()
+int test_1_7()
 {
 	int **a = new int*[4];
 	for (int i = 0; i < 4; ++i)

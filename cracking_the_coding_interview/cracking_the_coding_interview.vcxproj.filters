@@ -30,9 +30,48 @@
     <ClCompile Include="..\c++\Chapter_One\1_4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\c++\Chapter_One\1_5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_One\1_6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_One\1_7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_One\1_8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_Two\2_1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_Two\2_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_Two\2_3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_Two\2_4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_Two\2_5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_Three\3_1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_Three\3_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\c++\Chapter_Two\util_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\c++\Chapter_Two\util_2.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

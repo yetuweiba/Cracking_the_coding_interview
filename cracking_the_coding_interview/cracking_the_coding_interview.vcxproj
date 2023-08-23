@@ -148,9 +148,22 @@
     <ClCompile Include="..\c++\Chapter_One\1_2.cpp" />
     <ClCompile Include="..\c++\Chapter_One\1_3.cpp" />
     <ClCompile Include="..\c++\Chapter_One\1_4.cpp" />
+    <ClCompile Include="..\c++\Chapter_One\1_5.cpp" />
+    <ClCompile Include="..\c++\Chapter_One\1_6.cpp" />
+    <ClCompile Include="..\c++\Chapter_One\1_7.cpp" />
+    <ClCompile Include="..\c++\Chapter_One\1_8.cpp" />
+    <ClCompile Include="..\c++\Chapter_Three\3_1.cpp" />
+    <ClCompile Include="..\c++\Chapter_Three\3_2.cpp" />
+    <ClCompile Include="..\c++\Chapter_Two\2_1.cpp" />
+    <ClCompile Include="..\c++\Chapter_Two\2_2.cpp" />
+    <ClCompile Include="..\c++\Chapter_Two\2_3.cpp" />
+    <ClCompile Include="..\c++\Chapter_Two\2_4.cpp" />
+    <ClCompile Include="..\c++\Chapter_Two\2_5.cpp" />
+    <ClCompile Include="..\c++\Chapter_Two\util_2.cpp" />
     <ClCompile Include="cracking_the_coding_interview.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\c++\Chapter_Two\util_2.h" />
     <ClInclude Include="test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

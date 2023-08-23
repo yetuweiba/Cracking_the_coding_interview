@@ -48,7 +48,7 @@ int remove_duplicate_char_in_string(char *pstr, int len)
 	return ret;
 }
 
-TEST(reverse_TEST, TRUE_CASE)
+TEST(reverse_1_3TEST, TRUE_CASE)
 {
 	char test1[] = "abcda";
 	int ret = remove_duplicate_char_in_string(test1, 5);

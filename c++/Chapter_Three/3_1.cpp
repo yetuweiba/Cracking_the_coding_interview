@@ -55,7 +55,7 @@ public:
 
         if (curr_ >= STACK_LEN)
         {
-            std::cout << "栈满了" << std::endl;
+            std::cout << "stack is full" << std::endl;
             return -1;
         }
 
@@ -118,7 +118,7 @@ private:
     Node* data_;
 };
 
-int main()
+int test_3_1()
 {
     Stack st;
     for (int i = 0; i < 4; ++i)

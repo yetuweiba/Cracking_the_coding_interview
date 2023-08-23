@@ -13,3 +13,4 @@ cracking_the_coding_interview/.vs/cracking_the_coding_interview/v16/.suo
 *.sdf
 *.suo
 .vscode/*
+.vs/*

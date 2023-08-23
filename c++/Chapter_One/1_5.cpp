@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <gtest/gtest.h>
 
+#include "../cracking_the_coding_interview/test.h"
+
 // Write a method to replace all spaces in a string with ‘%20’.
 
 // 思路：首先遍历字符串，计算所需缓存的大小。之后再遍历字符串，依次将
@@ -61,7 +63,7 @@ TEST(ReplaceTest, SuccessCase1)
 }
 TEST(ReplaceTest1, SuccessCase2)
 {
-	char *test_2 = " a a ";
+	char test_2[] = " a a ";
 	char *pret2 = replace_spaces(test_2, 5);
 	EXPECT_STREQ("%20a%20a%20", pret2);
 	if (!pret2)
@@ -72,7 +74,7 @@ TEST(ReplaceTest1, SuccessCase2)
 
 TEST(ReplaceTest2, SuccessCase3)
 {
-	char *test_3 = "abcde";
+	char test_3[] = "abcde";
 	char *pret3 = replace_spaces(test_3, 5);
 	EXPECT_STREQ("abcde", pret3);
 	if (!pret3)

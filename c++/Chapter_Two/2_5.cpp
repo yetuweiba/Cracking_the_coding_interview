@@ -17,47 +17,9 @@
 // 2. 使用两个指针，一个快指针，一个慢指针，当快指针赶上慢指针的时候，说明链表中存在环
 #include <stdio.h>
 
-struct Node
-{
-	int data;
-	Node *next;
-	Node()
-		:data(-1)
-		,next(NULL)
-	{
-		// empty
-	}
-};
+#include "util_2.h"
 
-Node* init_list(int data[], const int len, const int m)
-{
-	Node* head = NULL;
 
-	if (!data || len <= 0)
-	{
-		return head;
-	}
-
-	Node* temp = new Node();
-	Node* loop_node = NULL;
-	temp->data = data[0];
-	head = temp;
-	for (int i = 1; i < len; ++i)
-	{
-		Node *temp1 = new Node();
-		temp->next = temp1;
-		temp1->data = data[i];
-		temp = temp->next;
-		if (i == m - 1)
-		{
-			loop_node = temp1;
-		}
-	}
-
-	temp->next = loop_node;
-
-	return head;
-}
 // 
 Node* get_loop_element(Node* head)
 {
@@ -98,7 +60,7 @@ Node* get_loop_element(Node* head)
 	return pResult;
 }
 
-int main()
+int test_2_5()
 {
 	// 目前申请的内存暂无法释放，因为链表中存在环
 	// 只有等到程序退出去后由系统销毁
